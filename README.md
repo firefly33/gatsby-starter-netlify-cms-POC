@@ -71,6 +71,7 @@ import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import BlogPostPreview from "./preview-templates/BlogPostPreview";
 import ProductPagePreview from "./preview-templates/ProductPagePreview";
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
+import ComponentPagePreview from './preview-templates/ComponentPagePreview';
 
 // CMS.registerMediaLibrary(uploadcare);
 // CMS.registerMediaLibrary(cloudinary);
@@ -79,6 +80,7 @@ CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("about", AboutPagePreview);
 CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("blog", BlogPostPreview);
+CMS.registerPreviewTemplate('components', ComponentPagePreview);
 ```
 
 Note: Don't forget to also remove them from `package.json` and `yarn.lock` / `package-lock.json` using `yarn` or `npm`. During the build netlify-cms-app will bundle the media libraries as well, having them removed will save you build time.
