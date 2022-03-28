@@ -20,13 +20,21 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     nested:
       depth: 100 # max depth to show in the collection tree
-      summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
     fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "component-template",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Component structure", name: "componentStructure", widget: "markdown" }
+      - { label: "Type", name: "type", widget: "list" }
+      - { label: "Related to", name: "related", widget: "list" }
+      - { label: "Tab 1", name: "tab1", widget: "markdown" }
+      - { label: "Tab 2", name: "tab2", widget: "markdown" }
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
